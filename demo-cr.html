@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+        <title>RESPONSIVE NAVIGATION MENU</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="dist/responsive-nav.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="dist/responsive-nav.css" />
+        <link rel="stylesheet" type="text/css" href="themes.css" />
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#top-menu2").responsiveNav({
+                    openSubmenuOnClick: true,
+                    activateOnWidth: 500,
+                });
+            });
+        </script>
+        <style>
+            *,
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: arial;
+            }
+        </style>
+    </head>
+    <body>
+        <br />
+        <br />
+        <h2>Responsive menu activated on custom resolution</h2>
+        <nav id="top-menu2">
+            <div class="label-menu">menu</div>
+            <div>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#"><span>list item First Level 1</span></a>
+                        <div>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><span>list item Second Level 1.1</span></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="#"><span>list item 1.1.1</span></a></li>
+                                            <li><a href="#"><span>list item 1.1.2</span></a></li>
+                                            <li><a href="#"><span>list item 1.1.3</span></a></li>
+                                            <li><a href="#"><span>list item 1.1.4</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#"><span>list item Second Level 1.2</span></a></li>
+                                <li><a href="#"><span>list item Second Level 1.3</span></a></li>
+                                <li><a href="#"><span>list item Second Level 1.4</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);"><span>list item First Level 2</span></a>
+                        <div>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><span>list item Second Level 2.1</span></a>
+                                    <div>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#"><span>list item 2.1.1</span></a>
+                                                <div>
+                                                    <ul>
+                                                        <li><a href="#"><span>list item 2.1.1.1</span></a></li>
+                                                        <li><a href="#"><span>list item 2.1.1.2</span></a></li>
+                                                        <li><a href="#"><span>list item 2.1.1.3</span></a></li>
+                                                        <li><a href="#"><span>list item 2.1.1.4</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#"><span>list item 2.1.2</span></a></li>
+                                            <li><a href="#"><span>list item 2.1.3</span></a></li>
+                                            <li><a href="#"><span>list item 2.1.4</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#"><span>list item Second Level 2.2</span></a></li>
+                                <li><a href="#"><span>list item Second Level 2.3</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>list item First Level 3</span></a>
+                        <div>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><span>list item Second Level 3.1</span></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="#"><span>list item 3.1.1</span></a></li>
+                                            <li><a href="#"><span>list item 3.1.2</span></a></li>
+                                            <li><a href="#"><span>list item 3.1.3</span></a></li>
+                                            <li><a href="#"><span>list item 3.1.4</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#"><span>list item Second Level 2.2</span></a></li>
+                                <li><a href="#"><span>list item Second Level 2.3</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"><span>list item First Level 4</span></a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>list item First Level 5</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="#"><span>list item 5.1 :</span></a></li>
+                                <li><a href="#"><span>list item 5.2</span></a></li>
+                                <li><a href="#"><span>list item 5.3</span></a></li>
+                                <li><a href="#"><span>list item 5.4</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"><span>list item First Level 4</span></a></li>
+                    <li><a href="#"><span>list item First Level 4</span></a></li>
+                    <li><a href="#"><span>list item First Level 4</span></a></li>
+                    <li><a href="#"><span>list item First Level 4</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </body>
+</html>
