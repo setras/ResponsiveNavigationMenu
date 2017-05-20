@@ -254,13 +254,21 @@
 @media (min-width: 1200px) {
     /* lg */
 }
+@media (min-width: 768px) {
+    .responsive-nav.disableHoverDD li.dropdown:hover > div, .responsive-nav.disableHoverDD li.dropdown:hover > div {
+        display: none;
+    }
+    .responsive-nav.disableHoverDD li.dropdown.open-click:hover > div, .responsive-nav.disableHoverDD li.dropdown.open-click:hover > div {
+        display: block;
+    }
+}
 
 /* default theme */
 .light li a {
     background-color: #F1F1F1;
     color: #4F5864;
 }
-.light li:hover > a {
+.light li:hover > a, .light li.open-click > a {
     background-color: #4F5864;
     color: #F1F1F1;
 }

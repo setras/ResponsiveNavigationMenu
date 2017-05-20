@@ -1,12 +1,12 @@
 /*
- * Responsive Navigation Menu v4.0.2
+ * Responsive Navigation Menu v4.1.0
  * https://webgadgets.net/plugins/responsive-navigation-menu
  *
  * Copyright 2016, WebGadgets
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * Date: 2017-02-25
+ * Date: 2017-05-21
  */
 (function ($) {
     $.fn.responsiveNav = function (options) {
@@ -16,6 +16,7 @@
             type: 'horizontal', //vertical, horizontal
             offCanvas: false,
             openSubmenuOnClick: false,
+            openSubmenuOnHover: true,
             activateOnWidth: 0,
             theme: 'light'
         }, options);
@@ -84,19 +85,28 @@
                 });
             }
 
+            if (settings.openSubmenuOnHover === false) {
+                rn.addClass('disableHoverDD');
+            }
             if (settings.openSubmenuOnClick === true) {
                 $('html').click(function () {
                     //Hide the menus if visible
                     $('.dropdown.open-click').removeClass('open-click');
                 });
-                $("." + rn_class + " > div > ul > .dropdown").click(function (event) {
+//                $("." + rn_class + " > div > ul > .dropdown").click(function (event) {
+                $("." + rn_class + " > div > ul .dropdown a").click(function (event) {
                     event.stopPropagation();
                 });
+//                rn.find('div > ul > li.dropdown > a').click(function () {
                 rn.find('div > ul > li.dropdown > a').click(function () {
+                    $(this).parent('.dropdown').siblings('.open-click').find('.open-click').removeClass('open-click');
+                    //$(this).siblings('.open-click').find('.open-click').removeClass('open-click');
+                });
+                rn.find('div > ul > li.dropdown a').click(function () {
                     if (viewport().width >= 768 || (settings.activateOnWidth > 0 && viewport().width >= settings.activateOnWidth)) {
                         $(this).parent('.dropdown').siblings('.open-click').removeClass('open-click');
                         $(this).parent('.dropdown').toggleClass('open-click');
-                        $(this).parent('.dropdown').parents('.dropdown').toggleClass('open-click');
+                        //$(this).parent('.dropdown').parents('.dropdown').toggleClass('open-click');
                     }
                 });
             }

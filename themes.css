@@ -3,7 +3,7 @@
     color: #F1F1F1;
     background-color: #5F5F5F;
 }
-.dark li:hover > a {
+.dark li:hover > a, .dark li.open-click > a {
     background-color: #000;
 }
 .dark.off-canvas .label-menu + div {
@@ -17,21 +17,7 @@
     color: #F1F1F1;
     background-color: #006600;
 }
-.green li:hover > a {
-    background-color: #003300;
-}
-.green.off-canvas .label-menu + div {
-    background-color: #006600;
-}
-.green .close-menu a span:before, .green .close-menu a span:after {
-    background-color: #F1F1F1;
-}
-/* green theme */
-.green li a, .green .label-menu + div, .green .label-menu {
-    color: #F1F1F1;
-    background-color: #006600;
-}
-.green li:hover > a {
+.green li:hover > a, .green li.open-click > a {
     background-color: #003300;
 }
 .green.off-canvas .label-menu + div {
@@ -45,7 +31,7 @@
     color: #000;
     background-color: #87CEEB;
 }
-.skyblue li:hover > a {
+.skyblue li:hover > a, .skyblue li.open-click > a {
     background-color: #3399ff;
 }
 .skyblue.off-canvas .label-menu + div {
