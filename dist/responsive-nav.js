@@ -1,12 +1,12 @@
 /*
- * Responsive Navigation Menu v4.1.0
+ * Responsive Navigation Menu v4.1.1
  * https://webgadgets.net/plugins/responsive-navigation-menu
  *
  * Copyright 2016, WebGadgets
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * Date: 2017-05-21
+ * Date: 2017-05-27
  */
 (function ($) {
     $.fn.responsiveNav = function (options) {
@@ -18,7 +18,8 @@
             openSubmenuOnClick: false,
             openSubmenuOnHover: true,
             activateOnWidth: 0,
-            theme: 'light'
+            theme: 'light',
+            menuIcon: true
         }, options);
 
         return this.each(function () {
@@ -54,6 +55,9 @@
                 }
             });
 
+            if (settings.menuIcon === true) {
+                rn.children('.label-menu').append('<span class="menu-icon"></span>');
+            }
             if (settings.offCanvas === true) {
                 rn.addClass('off-canvas');
                 //off canvas menu

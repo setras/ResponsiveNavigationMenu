@@ -42,6 +42,21 @@
     display: block;
     z-index: 1000;
 }
+.responsive-nav .label-menu .menu-icon:after, .responsive-nav-cr .label-menu .menu-icon:after {
+    content: '';
+    display: block;
+    border-bottom: 4px solid;
+}
+.responsive-nav .label-menu .menu-icon, .responsive-nav-cr .label-menu .menu-icon {
+    width: 28px;
+    display: inline-block;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    padding: 4px 0;
+    vertical-align: middle;
+    margin-left: 10px;
+    
+}
 .responsive-nav .label-menu, .responsive-nav-cr .label-menu {
     display: none;
 }
